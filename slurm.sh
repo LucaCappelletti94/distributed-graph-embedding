@@ -1,10 +1,10 @@
 #!/bin/bash
 
 #SBATCH --job-name=distributed-string-ppi-embedding
-#SBATCH --cpus-per-task=8
-#SBATCH --nodes=100
+#SBATCH --cpus-per-task=1
+#SBATCH --nodes=2
 #SBATCH --tasks-per-node 1
-#SBATCH --mem=52GB
+#SBATCH --mem=1GB
 #SBATCH --time 1:00:00
 
 nodes=$(scontrol show hostnames $SLURM_JOB_NODELIST) # Getting the node names
