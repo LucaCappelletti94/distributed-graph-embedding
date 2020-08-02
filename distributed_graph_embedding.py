@@ -5,5 +5,5 @@ import sys
 
 seed = sys.argv[1]
 
-with open(f"/home/{seed}.txt", "w") as f:
+with open(f"{seed}.txt", "w") as f:
     f.write(f"Slurm job completed with seed: {seed}.")
