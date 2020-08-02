@@ -7,6 +7,9 @@
 #SBATCH --mem=1GB
 #SBATCH --time 1:00:00
 
+VENVPYTHONDIR="/home/cappelletti_luca94/distributed_ppi"
+source $VENVPYTHONDIR/bin/activate
+
 nodes=$(scontrol show hostnames $SLURM_JOB_NODELIST) # Getting the node names
 nodes_array=($nodes)
 

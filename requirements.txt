@@ -1,1 +1,3 @@
-git+git://github.com/monarch-initiative/embiggen
+google
+google-cloud-storage
+ensmallen-graph
