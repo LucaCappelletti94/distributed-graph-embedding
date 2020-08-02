@@ -10,7 +10,7 @@
 nodes=$(scontrol show hostnames $SLURM_JOB_NODELIST) # Getting the node names
 nodes_array=($nodes)
 
-for i in {0..$worker_num}; do
+for ((i=0;i<$worker_num;i++)); do
   node_name=${nodes_array[$i]}
   srun --nodes=1 --ntasks=1 -w $node_name python -u distributed_graph_embedding.py $i&# Starting the workers
 done
