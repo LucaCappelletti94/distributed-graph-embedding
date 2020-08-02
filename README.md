@@ -2,8 +2,15 @@
 Experiment to test if is possible to approximate huge graphs embedding
 
 ```
-python3 -m venv ~/distributed_ppi
-source ~/distributed_ppi/bin/activate
+wget https://repo.anaconda.com/archive/Anaconda3-2020.02-Linux-x86_64.sh -O anaconda.sh
+bash ./anaconda.sh -b
+echo "export PATH=\$PATH:$HOME/anaconda3/bin" >> $HOME/.bashrc
+
+bash
+conda init
+bash
+
+conda install tensorflow-gpu
 
 git clone https://github.com/monarch-initiative/embiggen # Until is published on pypi
 cd embiggen
